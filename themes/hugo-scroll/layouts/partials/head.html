@@ -4,7 +4,7 @@
 <title>{{ with .Title }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }}</title>
 
 {{ with .Site.Params.favicon }}
-  <link rel="shortcut icon" href="{{ . | absURL }}" type="image/png"
+  <link rel="shortcut icon" href="{{ . | relURL }}" type="image/png"
 />{{ end }}
 
 {{ with .Site.Params.description }}
@@ -19,11 +19,11 @@
 <meta name="MobileOptimized" content="320" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<link rel="stylesheet" href="{{ "css/screen.css" | absURL }}" />
-<link rel="stylesheet" href="{{ "css/fonts.css" | absURL }}" type="text/css" />
+<link rel="stylesheet" href="{{ "css/screen.css" | relURL }}" />
+<link rel="stylesheet" href="{{ "css/fonts.css" | relURL }}" type="text/css" />
 <link
   rel="stylesheet"
-  href="{{ "fork-awesome/css/fork-awesome.min.css" | absURL }}"
+  href="{{ "fork-awesome/css/fork-awesome.min.css" | relURL }}"
   type="text/css"
 />
 

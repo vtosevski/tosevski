@@ -52,7 +52,7 @@
      local "static/css"-directory. Then add a <link>-tag
      referencing your "custom.css" like so: -->
 
-<!-- <link rel="stylesheet" href='{{ "css/custom.css" | absURL }}'> -->
+<!-- <link rel="stylesheet" href='{{ "css/custom.css" | relURL }}'> -->
 
 <!-- Custom CSS: Color Codes
      You may checkout https://htmlcolorcodes.com/ to get those
@@ -64,17 +64,17 @@
 <!-- <link
   rel="apple-touch-icon"
   sizes="180x180"
-  href="{{ "images/apple-touch-icon.png" | absURL }}"
+  href="{{ "images/apple-touch-icon.png" | relURL }}"
 />
 <link
   rel="icon"
   type="image/png"
   sizes="32x32"
-  href="{{ "images/favicon-32x32.png" | absURL }}"
+  href="{{ "images/favicon-32x32.png" | relURL }}"
 />
 <link
   rel="icon"
   type="image/png"
   sizes="16x16"
-  href="{{ "images/favicon-16x16.png" | absURL }}"
+  href="{{ "images/favicon-16x16.png" | relURL }}"
 /> -->
