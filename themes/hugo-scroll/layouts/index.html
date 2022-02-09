@@ -1,0 +1,25 @@
+{{ define "main" }}
+{{ $headless := .Site.GetPage "/homepage" }}
+{{ $sections := $headless.Resources.ByType "page" }}
+{{ $sections := cond .Site.BuildDrafts $sections (where $sections "draft" "==" false) }}
+<header id="site-head" {{ with .Params.header_image }}style="background-image: url({{ . }})"{{ end }}>
+</header>
+<main class="content" role="main">
+
+    <div class='fixed-nav'>
+    </div>
+    {{ range $index_val, $elem_val := $sections }}
+        <div class='post-holder'>
+            <article id='{{ anchorize .Title }}' class='post {{ if eq $index_val 0 }}first{{ end }} {{ if eq (add $index_val 1) (len $sections) }}last{{ end }}'>
+                <header class="post-header">
+                    <h2 class="post-title">{{ .Title }}</h2>
+                </header>
+                <section class="post-content">
+                    {{ .Content }}
+                </section>
+            </article>
+            <div class='post-after'></div>
+        </div>
+    {{ end }}
+</main>
+{{ end }}
