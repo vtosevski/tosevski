@@ -1,7 +1,8 @@
 ---
 title: "Contact"
-weight: 4
+weight: 1
 header_menu: true
+draft: false
 ---
 
 {{<icon class="fa fa-envelope">}}&nbsp;[vinko@tosevski.ch](mailto:vinko@tosevski.ch)
